@@ -1,14 +1,16 @@
 <?php
 namespace Controller;
-use Model\DatabaseSite;
+use Model\Product;
+use Model\Category;
+use Core\Session;
 class IndexController extends Base_Controller {
 	public function Index() {
 		// load view banner for website
 		$this->loadView('site/template/section-one');
 		
 		//Load dữ liệu từ database
-		$db = new DatabaseSite();
-		$categories = $db->select('category');
+		$db = new Category();
+		$categories = $db->getAll();
 		$data = array();
 		$listColumn = array(
 			'product.id as id',
@@ -56,13 +58,14 @@ class IndexController extends Base_Controller {
 		$data = json_decode($txt);
 	}
 
-	public function Connection($title) {
-		$db = new DatabaseSite();
-		$product = $db->getItembyAlias('product', '/'.$title);
+	public function viewProduct($alias) {
+		$db = new Product();
+		$product = $db->getItembyAlias('/'.$alias);
+		$db->disconnect();
 		if(!empty($product))
 			$this->loadView('site/template/product-detail', $product[0]);
 		else
-			$this->loadView('error\404');
+			$this->loadView('error/404');
 	}
 
 	public function Convert_Json() {
@@ -77,8 +80,7 @@ class IndexController extends Base_Controller {
 
 		// return list product by category
 		$data = json_decode($txt);
-		$db = new DatabaseSite();
-
+		$db = new Product();
 		foreach ($data as $title => $arr) {
 			$isslide = ($arr[0] = 'div' ) ? 1 : 0;
 			if($db->insert('category', array('name', 'isslide'), array($title, $isslide))) {
@@ -98,6 +100,18 @@ class IndexController extends Base_Controller {
 	}
 
 	public function ViewCart() {
-		$this->loadView('site/template/shopcart');
+		$productdb = new Product();
+		$ls_id 	   = Session::read('cart_item') ? Session::read('cart_item') : array();
+		$ls		   = array();		
+		$total     = 0;
+		foreach ($ls_id as $id => $num_of_product) {
+			$item  			= $productdb->getItembyId($id, array('name', 'price_sale', 'price_original', 'alias', 'url_images'))[0];
+			$item['num']    = $num_of_product;
+			$item['id']		= $id;
+			$ls[] 			= $item;
+			$total	+= (floatval($item['price_sale'])?floatval($item['price_sale']):floatval($item['price_original']))*$num_of_product;
+		}
+		$this->loadView('site/template/shopcart', array('total' => $total,'list_products' => $ls));
+		// $productdb->disconnect();
 	}
 }

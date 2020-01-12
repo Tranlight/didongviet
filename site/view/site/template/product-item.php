@@ -7,8 +7,8 @@
 	<div class="product-box">
 		<h4 class="product-title"><a href=<?php echo '"/product'.$p['alias'].'"' ?>><?php echo $p['name'] ?></a></h4>
 		<div class="product-price">
-			<strong><?php echo currency_format($p['price_original'])?></strong>
-			<span><?php echo !empty($p['price_sale'])?currency_format($p['price_sale']):'' ?></span>
+			<strong><?php echo currency_format($p['price_sale'])?></strong>
+			<span><?php echo !empty($p['price_original'])?currency_format($p['price_original']):'' ?></span>
 		</div>
 	</div>
 </div>

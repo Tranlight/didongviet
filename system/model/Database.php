@@ -19,7 +19,6 @@ class Database
     protected $Sql;
     protected $Password;
     protected $Instance;
-
     /**
      * Database::__construct()
      * Constructor & destructor
@@ -27,12 +26,9 @@ class Database
     public function __construct()
     {
         $this->setup();
-        $this->connect();
     }
-
     public function __destruct()
     {}
-
     /**
      * Database::setup()
      * This function is a kind of parametrized constructor. Sets up the database's host, user, etc.
@@ -48,7 +44,6 @@ class Database
         $this->Database = $database ?: getenv("DB_DATABASE");
         $this->MysqlPort = $port ?: getenv("DB_PORT");
     }
-
     /**
      * Database::connect()
      * Opens up the connection to the database based on the object's attributes¸
@@ -60,15 +55,14 @@ class Database
         if($this->Instance)
             return $this->Instance;
         $con = mysqli_connect($this->Host, $this->User, $this->Password, $this->Database, $this->MysqlPort);
+        mysqli_set_charset($con, 'utf8');
         if (mysqli_connect_errno()) {
             die($this->getError());
         } else {
-            mysqli_set_charset($con, 'utf8');
             $this->Instance = $con;
         }
         return $this->Instance;
     }
-
     /**
      * Database::disconnect()
      * Closes the database's connection to avoid conflict and release memory
@@ -81,7 +75,6 @@ class Database
             die($this->getError());
         }
     }
-
     /**
      * Database::select()
      * Format SQL and returns query content
@@ -180,7 +173,6 @@ class Database
         } else
             die("Must provide a table to query the database.");
     }
-
     /**
      * Database::insert()
      * Format SQL and inserts into database
@@ -238,9 +230,7 @@ class Database
         } else {
             die("Must provide a table to insert to");
         }
-
     }
-
     /**
      * Database::delete()
      * Format SQL and deletes the specific row in the database
@@ -290,7 +280,6 @@ class Database
             die("Must provide a table to delete from");
         }
     }
-
     /**
      * Database::update()
      * Format SQL and updates the specific row in the database
@@ -358,7 +347,6 @@ class Database
             die("Must provide a table to delete from");
         }
     }
-
     public function getKeys($table, $type = "primary")
     {
         $this->connect();
@@ -394,7 +382,6 @@ class Database
             return $return;
         }
     }
-
     public function getJoinsArray($table)
     {
         $fk_array = array();
@@ -437,13 +424,10 @@ class Database
 
         return $return;
     }
-
     public function getSql()
     {
         return $this->Sql;
     }
-
-
     private function getError()
     {
         return "<br/>" . $this->Sql . "<br/> SQL Exception #" . $this->Instance->errno . " : " . $this->Instance->error . "<br/>";

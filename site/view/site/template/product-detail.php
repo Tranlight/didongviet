@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
 	<div class="product-detail">
 		<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
 			<div class="outer">
@@ -29,8 +29,8 @@
 					<i class="fal fa-star"></i>
 				</div>
 				<div class="price">
-					<strong><?php echo currency_format($price_original) ?></strong>
-					<del><?php echo !empty($price_sale)?currency_format($price_sale):'' ?></del>
+					<strong><?php echo currency_format($price_sale) ?></strong>
+					<del><?php echo !empty($price_original)?currency_format($price_original):'' ?></del>
 				</div>
 				<div class="attr">
 					<div class="color">
@@ -50,7 +50,7 @@
 						<li>Máy mới 100% do Apple Việt Nam phân phối chính hãng</li>
 					</div>
 				</div>
-				<button type="button" class="btn btn-large btn-block btn-info">
+				<button type="button" id="add-to-cart" item-buy=<?php echo "\"$id\"" ?>class="btn btn-large btn-block btn-info">
 					<div><strong>Mua ngay</strong></div>
 					<span>Miễn phí giao hàng trong nội thành</span>
 				</button>

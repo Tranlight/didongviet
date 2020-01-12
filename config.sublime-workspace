@@ -1,0 +1,846 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"hi",
+				"height\t.height()"
+			],
+			[
+				"appe",
+				"appendChild"
+			],
+			[
+				"conte",
+				"content-container"
+			],
+			[
+				"fad",
+				"fadeOut\t.fadeOut()"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"appen",
+				"append\t.append()"
+			],
+			[
+				"fade",
+				"fadeOut\t.fadeOut()"
+			],
+			[
+				"getele",
+				"getElementById"
+			],
+			[
+				"post",
+				"postition"
+			],
+			[
+				"im",
+				"image"
+			],
+			[
+				"wrap",
+				"wrapdiv"
+			],
+			[
+				"attr",
+				"attr\t.attr() - single"
+			],
+			[
+				"add",
+				"addCart"
+			],
+			[
+				"tab-",
+				"tab-pane"
+			],
+			[
+				"off",
+				"offsetHeight"
+			],
+			[
+				"uni",
+				"undefined"
+			],
+			[
+				"offse",
+				"offsetWidth"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"Cate",
+				"Category"
+			],
+			[
+				"prica",
+				"price_original"
+			],
+			[
+				"Prodc",
+				"Product"
+			],
+			[
+				"ls",
+				"ls_id"
+			],
+			[
+				"pr",
+				"productdb"
+			],
+			[
+				"Prod",
+				"product"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"geteleme",
+				"getElementsByTagName"
+			],
+			[
+				"getel",
+				"getElementById"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"bs3-input",
+				"bs3-input:tel\tbs3-input-tel"
+			],
+			[
+				"bs3-from",
+				"bs3-navbar:form\tbs3-navbar-form"
+			],
+			[
+				"bs3-inputg",
+				"bs3-input-group:text:btn\tbs3-input-group-text-btn"
+			],
+			[
+				"bs3-group",
+				"bs3-input-group-btn\tbs3-input-group-btn"
+			],
+			[
+				"bs3-button",
+				"bs3-button:danger\tbs3-button-danger"
+			],
+			[
+				"bs3-li",
+				"bs3-list-group\tbs3-list-group"
+			],
+			[
+				"bs3-co",
+				"bs3-col:3\tbs3-col-3"
+			],
+			[
+				"bs3-table",
+				"bs3-table:hover\tbs3-table-hover"
+			],
+			[
+				"bs3-col",
+				"bs3-col:9\tbs3-col-9"
+			],
+			[
+				"padding",
+				"padding-left\tproperty"
+			],
+			[
+				"bs3-nav",
+				"bs3-navbar\tbs3-navbar"
+			],
+			[
+				"margi",
+				"margin-bottom\tproperty"
+			],
+			[
+				"marig",
+				"margin-right\tproperty"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"bs3-nab",
+				"bs3-navbar\tbs3-navbar"
+			],
+			[
+				"float",
+				"float\tproperty"
+			],
+			[
+				"marg",
+				"margin-right\tproperty"
+			],
+			[
+				"margin",
+				"margin-right\tproperty"
+			],
+			[
+				"padd",
+				"padding-left\tproperty"
+			],
+			[
+				"paddi",
+				"padding\tproperty"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"tex",
+				"text-align\tproperty"
+			],
+			[
+				"ini",
+				"inline-block\tdisplay"
+			],
+			[
+				"mar",
+				"margin-right\tproperty"
+			],
+			[
+				"bs3-but",
+				"bs3-button:info\tbs3-button-info"
+			],
+			[
+				"bs3-",
+				"bs3-col\tbs3-col"
+			],
+			[
+				"inl",
+				"inline-block\tdisplay"
+			],
+			[
+				"ar",
+				"array"
+			],
+			[
+				"cate",
+				"category"
+			],
+			[
+				"arr",
+				"array\t$… = array (…)"
+			],
+			[
+				"list",
+				"listColumn"
+			],
+			[
+				"produc",
+				"product"
+			],
+			[
+				"produ",
+				"product"
+			],
+			[
+				"product_",
+				"product_category"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"prodct",
+				"product_id"
+			],
+			[
+				"prodcut",
+				"product_category"
+			],
+			[
+				"cater",
+				"category"
+			],
+			[
+				"asse",
+				"asset"
+			],
+			[
+				"load",
+				"loadView"
+			],
+			[
+				"a",
+				"alias"
+			],
+			[
+				"str_rep",
+				"str_replace"
+			],
+			[
+				"Database",
+				"DatabaseModel"
+			],
+			[
+				"Pro",
+				"product_id"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/E/htdocs/goldtime-social/themes/goldtime/layout/video/content.phtml",
+			"settings":
+			{
+				"buffer_size": 9848,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Context",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Watch",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Stack",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Breakpoint",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"phpfmt: format now"
+			],
+			[
+				"phpfrmt",
+				"phpfmt: format now"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/htdocs/goldtime-social",
+		"/E/htdocs/goldtime-social/themes",
+		"/E/htdocs/goldtime-social/themes/goldtime",
+		"/E/htdocs/goldtime-social/themes/goldtime/layout",
+		"/E/htdocs/goldtime-social/themes/goldtime/layout/video"
+	],
+	"file_history":
+	[
+		"/E/htdocs/goldtime-social/themes/goldtime/layout/container.phtml",
+		"/E/htdocs/goldtime-social/themes/goldtime/stylesheet/style.css",
+		"/E/htdocs/goldtime-social/themes/goldtime/layout/video/content.phtml",
+		"/E/htdocs/goldtime-social/assets/libraries/onesignal/vendor/guzzlehttp/guzzle/src/Message/MessageFactory.php",
+		"/E/htdocs/goldtime-social/assets/includes/app_start.php",
+		"/E/htdocs/goldtime-social/assets/includes/functions_one.php",
+		"/E/htdocs/goldtime-social/themes/goldtime/layout/chat/manage.phtml",
+		"/E/htdocs/goldtime-social/xhr/chat.php",
+		"/E/htdocs/project.sublime-project",
+		"/E/htdocs/dienthoai/public/css/style.css",
+		"/E/htdocs/dienthoai/site/controller/IndexController.php",
+		"/E/htdocs/dienthoai/system/router/web.php",
+		"/E/htdocs/goldtime-social/assets/includes/functions_three.php",
+		"/E/htdocs/goldtime-social/config.php",
+		"/E/htdocs/goldtime-social/sources/video.php",
+		"/E/htdocs/goldtime-social/assets/includes/functions_two.php",
+		"/E/htdocs/goldtime-social/assets/includes/tabels.php",
+		"/E/htdocs/dienthoai/system/core/Session.php",
+		"/E/htdocs/dienthoai/public/js/script.js",
+		"/E/htdocs/dienthoai/index.php",
+		"/E/htdocs/dienthoai/site/controller/RequestController.php",
+		"/E/htdocs/dienthoai/site/view/site/include/header.php",
+		"/E/htdocs/dienthoai/site/model/Table.php",
+		"/E/htdocs/dienthoai/site/view/site/template/product-detail.php",
+		"/E/htdocs/dienthoai/site/model/Product.php",
+		"/E/htdocs/dienthoai/site/model/Category.php",
+		"/C/Users/tranl/Downloads/html-screen-capture-js-master/demo/demo.js",
+		"/C/Users/tranl/Downloads/html-screen-capture-js-master/demo/demo.html",
+		"/C/Users/tranl/Downloads/jscapture-master/src/js-capture.js",
+		"/C/Users/tranl/Downloads/iconfinder_device-camera-capture-photo-glyph_763254.svg",
+		"/C/Users/tranl/Downloads/PHP-Secure-Session-master/src/SecureHandler.php",
+		"/E/htdocs/array/index.php",
+		"/C/Users/tranl/Downloads/gtcsocial_new.sql",
+		"/E/htdocs/goldtime-social/themes/goldtime/layout/chat/content.phtml",
+		"/E/htdocs/goldtime-social/themes/goldtime/javascript/script.js",
+		"/E/htdocs/goldtime-social/themes/goldtime/layout/header/content.phtml",
+		"/C/Users/tranl/Documents/a.sql",
+		"/C/Users/tranl/Documents/20191225091139.sql",
+		"/E/htdocs/goldtime-social/htaccess.txt",
+		"/E/htdocs/goldtime-social/xhr/login.php",
+		"/E/htdocs/goldtime-social/themes/goldtime/layout/welcome/content.phtml",
+		"/E/htdocs/goldtime-social/assets/includes/functions_general.php",
+		"/E/htdocs/goldtime-social/sources/welcome.php",
+		"/E/htdocs/goldtime-social/index.php",
+		"/E/htdocs/goldtime-social/updater.php",
+		"/E/htdocs/goldtime-social/wowonder.sql",
+		"/E/htdocs/goldtime-social/assets/languages/english.php",
+		"/E/htdocs/goldtime-social/admin-panel/autoload.php",
+		"/E/htdocs/goldtime-social/admin-panel/pages/ban-users/list.phtml",
+		"/E/htdocs/goldtime-social/admin-panel/pages/bank-receipts/content.phtml",
+		"/E/htdocs/goldtime-social/.htaccess",
+		"/E/htdocs/goldtime-social/nginx.conf",
+		"/E/htdocs/dienthoai/site/view/error/404.php",
+		"/C/Users/tranl/Downloads/colorlib-error-404-4/colorlib-error-404-4/index.html",
+		"/E/htdocs/goldtime-social/login-with.php",
+		"/E/htdocs/dienthoai/system/core/autoload.php",
+		"/E/htdocs/dienthoai/site/view/site/error/404.php",
+		"/E/htdocs/dienthoai/public/css/shopcart.css",
+		"/E/htdocs/dienthoai/site/view/site/template/section-one.php",
+		"/C/Users/tranl/Desktop/hosts",
+		"/E/htdocs/dienthoai/site/view/site/template/product-list-slider.php",
+		"/E/htdocs/dienthoai/site/view/site/template/product-list-row.php",
+		"/E/htdocs/dienthoai/site/view/site/template/product-item.php",
+		"/E/htdocs/Hello/router/web.php",
+		"/E/htdocs/Hello/sftp-config.json",
+		"/E/htdocs/dienthoai/sftp-config-alt.json",
+		"/E/htdocs/dienthoai/sftp-config.json",
+		"/E/htdocs/dienthoai/system/config/config.php",
+		"/E/htdocs/dienthoai/system/helper/URL_Helper.php",
+		"/E/htdocs/dienthoai/.htaccess",
+		"/E/htdocs/dienthoai/site/view/site/footer.php",
+		"/E/htdocs/dienthoai/site/view/site/header.php",
+		"/E/htdocs/dienthoai/public/css/font-awesome/svgs/light/bell-school.svg",
+		"/C/Users/tranl/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
+		"/C/Users/tranl/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/tranl/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/E/htdocs/dienthoai/system/core/FT_Controller.php",
+		"/E/htdocs/dienthoai/site/core/Base_Controller.php",
+		"/E/htdocs/dienthoai/site/view/site/section-one.php",
+		"/E/htdocs/dienthoai/site/view/site/product-item.php",
+		"/E/htdocs/dienthoai/site/view/site/product-list-row.php",
+		"/E/htdocs/dienthoai/site/view/site/product-detail.php",
+		"/E/htdocs/dienthoai/site/view/site/product-list-slider.php",
+		"/E/htdocs/dienthoai/system/model/Database.php",
+		"/E/htdocs/dienthoai/system/router/RouteCollector.php",
+		"/E/htdocs/dienthoai/site/model/DatabaseSite.php",
+		"/E/htdocs/dienthoai/system/router/DataGenerator.php",
+		"/E/htdocs/dienthoai/system/router/Route.php",
+		"/E/htdocs/dienthoai/site/model/Database.php",
+		"/E/htdocs/dienthoai/public/assert/data.json",
+		"/C/Users/tranl/AppData/Roaming/Sublime Text 3/Packages/phpfmt/message",
+		"/E/htdocs/dienthoai/public/image/acer-aspire-a315-54-558r-i5-8265u-4gb-1tb-win10-n-18-400x400.jpg"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/E/htdocs/goldtime-social/themes/goldtime/layout/video/content.phtml",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 9848,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1344.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.7,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 226.0
+	},
+	"output.sftp":
+	{
+		"height": 439.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "config.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"hello",
+				"public\\css\\font-awesome\\svgs\\light\\bell-school.svg"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"13":
+				{
+					"group": 0,
+					"index": 0
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 256.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
