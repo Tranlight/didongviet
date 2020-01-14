@@ -446,6 +446,18 @@ div[id^="owl-"] .product-thumbnail img{
 #cart td {
 	vertical-align: middle;
 }
+.empty-cart {
+	background-color: white;
+    height: 400px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.empty-cart button, .empty-cart img {
+	width: 200px;
+}
 /*Responsive*/
 @media (max-width: 991px) {
 	.right-banner .cart-btn {

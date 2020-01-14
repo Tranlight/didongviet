@@ -1,4 +1,11 @@
 <div class="container-fluid">
+	<?php if(count($list_products) == 0):?>
+	<div class="empty-cart">
+		<img src="public/image/Logo/logo.png" style="margin: 0 auto;">
+		<h4 style="text-align: center;">Không có gì trong giỏ</h4>
+		<button class="btn btn-primary" onclick="location.replace('http://didongvietcom.vn')">Tiếp tục mua sắm</button>
+	</div>
+	<?php else:?>
 	<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
 		<table id="cart" class="table">
 			<thead>
@@ -54,9 +61,10 @@
 		</ul>
 		<button id="add-to-cart" type="button" class="btn btn-primary btn-block">Đặt hàng ngay</button>
 	</div>
-<div class="loading">
-	<div class="fa-3x">
-	<i class="fas fa-spinner fa-spin"></i>
+	<?php endif;?>
+	<div class="loading">
+		<div class="fa-3x">
+		<i class="fas fa-spinner fa-spin"></i>
+		</div>
 	</div>
-</div>
 </div>

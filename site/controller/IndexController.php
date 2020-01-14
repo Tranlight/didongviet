@@ -10,7 +10,7 @@ class IndexController extends Base_Controller {
 		
 		//Load dữ liệu từ database
 		$db = new Category();
-		$categories = $db->getAll();
+		$categories = $db->getCategoriesHasNotAlias();
 		$data = array();
 		$listColumn = array(
 			'product.id as id',

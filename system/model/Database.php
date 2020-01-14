@@ -125,9 +125,11 @@ class Database
             if ($wheres != "" || $wheres != null) {
                 foreach ($wheres as $index => $where) {
                     //if string format SQL
-                    if (gettype($where["value"]) == "string" && !is_numeric($where["value"])) {
+                    if($where["value"] == null) {
+                        $where["value"] = "NULL";
+                    }
+                    elseif (gettype($where["value"]) == "string" && !is_numeric($where["value"])) {
                         $where["value"] = "'" . $where["value"] . "'";
-                        $where["value"] = $where["value"];
                         $where["condition"] = "LIKE";
                     }
 
