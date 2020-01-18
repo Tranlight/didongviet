@@ -10,7 +10,7 @@ class IndexController extends Base_Controller {
 		
 		//Load dữ liệu từ database
 		$db = new Category();
-		$categories = $db->getCategoriesHasNotAlias();
+		$categories = $db->getCategoriesHaveNoAlias();
 		$data = array();
 		$listColumn = array(
 			'product.id as id',
@@ -67,7 +67,15 @@ class IndexController extends Base_Controller {
 		else
 			$this->loadView('error/404');
 	}
-
+	public function viewCategory($category_alias) {
+		$db = new Category();
+		$category = $db->getItembyAlias($category_alias);
+		$db->disconnect();
+		if($category)
+			$this->loadView('site/template/product-detail', $product[0]);
+		else
+			$this->loadView('error/404');
+	}
 	public function Convert_Json() {
 		$this->loadView('site/template/section-one');
 
