@@ -2,6 +2,7 @@
 namespace Controller;
 use Core\Controller;
 use Core\Session;
+use Model\Product;
 class RequestController extends Controller {
 
 	public function addToCart($product_id, $num) {

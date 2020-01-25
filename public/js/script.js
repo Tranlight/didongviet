@@ -48,13 +48,13 @@ $(document).ready(function(){
 function addCart(id, num = 0) {
 	$('.loading').css('display', 'flex');
 	$.ajax({
-		url: 'http://didongvietcom.vn/add-to-cart/' + id + '/' + num,
+		url: '/add-to-cart/' + id + '/' + num,
 		type: 'POST',
 		dataType: 'json'
 	})
 	.done(function(data) {
 		if(data.status == 200) {
-			window.location.replace('http://didongvietcom.vn/cart');
+			window.location.replace('/cart');
 		}
 		else {
 			console.log('loi');

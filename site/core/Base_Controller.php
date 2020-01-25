@@ -1,7 +1,6 @@
 <?php
-namespace Controller;
-use Core\Controller;
-use Core\Session;
+namespace Core;
+
 if ( ! defined('PATH_SYSTEM')) die ('Bad requested!');
 
 class Base_Controller extends Controller

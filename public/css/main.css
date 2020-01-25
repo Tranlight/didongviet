@@ -26,18 +26,32 @@ body {
   color: #676a6d; }
 
 a {
-  color: #3287B2; }
-  a:hover, a:focus {
-    color: #3b98c8;
-    text-decoration: none; }
+  color: #3287B2;
+}
+a:hover, a:focus {
+  color: #3b98c8;
+  text-decoration: none;
+}
 
 th {
-  font-weight: 600; }
+  font-weight: 600;
+}
+
+.tb {
+  overflow-y: auto;
+  height: 100px;
+}
+
+.tb thead tr {
+  position: sticky;
+  top: 0;
+}
 
 .page-title {
   margin-top: 0;
   margin-bottom: 30px;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 footer {
   position: absolute;
@@ -620,6 +634,7 @@ fieldset[disabled] .btn {
 /********************
  * PANELS
  ********************/
+
 .panel {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -690,7 +705,11 @@ fieldset[disabled] .btn {
   .panel .table > tfoot > tr > td:last-child,
   .panel .table > tfoot > tr > th:last-child {
     padding-left: 25px; }
-
+.product-mrg .panel-heading button{
+  padding: 6px 12px;
+  background-color: #00AAFF;
+  color: #FFFFFF;
+}
 .panel-footer {
   background-color: #fafafa; }
 

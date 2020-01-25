@@ -86,7 +86,7 @@ class Database
      * @param [array] $orderbys is array(0=>'column_name', ...)
      * @return [array] $results
      */
-    public function select($table, $columns = null, $wheres = null, $joins = null, $orderbys = null)
+    public function select($table, $columns = null, $wheres = null, $joins = null, $orderbys = null, $limit = null)
     {
         //Variables
         $return = array();
@@ -113,6 +113,11 @@ class Database
 
             //FROM statement
             $this->Sql .= " FROM " . $table;
+
+            //LIMIT
+            if(($limit != "") && ($limit != null) && !empty($limit)) {
+                $this->Sql .= " LIMIT " . $limit[0] . "," . $limit[1];
+            }
 
             //JOINS
             if ($joins != "" || $joins != null) {
@@ -158,6 +163,7 @@ class Database
 
             $this->Sql .= ";";
 
+            $a =$this->Sql;
             $results = $this->Instance->query($this->Sql);
 
             if (!$results) {

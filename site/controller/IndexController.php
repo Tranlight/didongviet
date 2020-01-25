@@ -3,7 +3,22 @@ namespace Controller;
 use Model\Product;
 use Model\Category;
 use Core\Session;
+use Core\Base_Controller;
 class IndexController extends Base_Controller {
+	public function getInfo() {
+		curl_setopt_array($ch = curl_init(), array(
+		  CURLOPT_URL => "https://api.pushover.net/1/messages.json",
+		  CURLOPT_POSTFIELDS => array(
+		    "token" => "abc123",
+		    "user" => "user123",
+		    "message" => "hello world",
+		  ),
+		  CURLOPT_SAFE_UPLOAD => true,
+		  CURLOPT_RETURNTRANSFER => true,
+		));
+		curl_exec($ch);
+		curl_close($ch);
+	}
 	public function Index() {
 		// load view banner for website
 		$this->loadView('site/template/section-one');
@@ -42,8 +57,9 @@ class IndexController extends Base_Controller {
 				$this->loadView('site/template/product-list-row', $list_product);
 		}
 	}
+
 	public function Rawl() {
-		$this->loadView('site/download_hoangha');
+		$this->loadView('site/crawl/crawl-dienthoai-tgdd');
 	}
 
 	public function loadDatafromJson() {
@@ -67,6 +83,7 @@ class IndexController extends Base_Controller {
 		else
 			$this->loadView('error/404');
 	}
+
 	public function viewCategory($category_alias) {
 		$db = new Category();
 		$category = $db->getItembyAlias($category_alias);
@@ -76,6 +93,7 @@ class IndexController extends Base_Controller {
 		else
 			$this->loadView('error/404');
 	}
+
 	public function Convert_Json() {
 		$this->loadView('site/template/section-one');
 

@@ -14,4 +14,10 @@ class Product extends Table
 		else
 			return null;
 	}
+	public function getbyLimit($column, $start, $limit) {
+		if($this->table) {
+			return $this->select($this->table, $column, null, null, null, array($start, $limit));
+		}
+		return null;
+	}
 }

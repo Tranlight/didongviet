@@ -21,4 +21,14 @@ class Table extends Database
 		else
 			return null;
 	}
+
+	public function size() {
+		if($this->table) {
+			$total = $this->select($this->table, array('count(id) as total'));
+			if($total) {
+				return $total[0]['total'];
+			}
+		}
+		return null;
+	}
 }

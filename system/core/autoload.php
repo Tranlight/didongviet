@@ -2,9 +2,9 @@
 
 // Load Base Controller Class
 include_once PATH_SYSTEM . '/core/Controller.php';
-if (file_exists(PATH_APPLICATION . '/core/Base_Controller.php')){
-    require_once PATH_APPLICATION . '/core/Base_Controller.php';
-}
+// if (file_exists(PATH_APPLICATION . '/core/Base_Controller.php')){
+//     require_once PATH_APPLICATION . '/core/Base_Controller.php';
+// }
 
 // Auto Load undeclared classes
 function my_app_autoloader($class)
@@ -48,7 +48,7 @@ $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
 switch ($routeInfo[0]) {
     // if not found Route
     case Router\Dispatcher::NOT_FOUND:
-        $controller = new Controller\Base_Controller();
+        $controller = new Core\Base_Controller();
         $controller->loadView('error/404');
     break;
     // if not Allowed Method
