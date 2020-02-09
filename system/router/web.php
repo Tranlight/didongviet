@@ -12,3 +12,5 @@ $r->post('/add-to-cart/{product_id}/{num}', 'Controller\RequestController@addToC
 $r->get('/admin[/]', 'Controller\AdminController@Index');
 // ADMIN
 $r->get('/admin/{page}', 'Controller\AdminController@Index');
+// PRODUCT
+$r->post('/products/{page}', 'Controller\RequestController@product_page');

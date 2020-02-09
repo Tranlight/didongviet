@@ -25,7 +25,7 @@
 	<link rel="icon" type="image/png" sizes="96x96" href=<?php echo asset('/img/favicon.png') ?>>
 	<script src=<?php echo asset('/vendor/jquery/jquery.min.js') ?>></script>
 	<script src=<?php echo asset('/vendor/bootstrap/js/bootstrap.min.js') ?>></script>
-	<script src=<?php echo asset('/js/script.js') ?>></script>
+	<script src=<?php echo asset('/js/admin-page.js') ?>></script>
 </head>
 
 <body>

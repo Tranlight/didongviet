@@ -21,7 +21,7 @@
 					<table class="table tb">
 						<thead>
 							<tr>
-								<th>#</th>
+								<th><input type="checkbox" name="all-cbox"></th>
 								<th>id</th>
 								<th>Cover</th>
 								<th>Title</th>
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			<ul class="pagination products-pag">
-			    <li class="page-item disabled">
+			    <li id="prev-pag" class="page-item disabled">
 			      <a class="page-link" tabindex="-1">Previous</a>
 			    </li>
 				<li class="page-item disabled"><a class="page-link"><?php echo 1 ?></a></li>
@@ -55,7 +55,7 @@
 			    ?>
 			    <li class="page-item"><a class="page-link"><?php echo $i ?></a></li>
 				<?php endfor;?>
-			    <li class=<?php echo '"page-item'. (($pages == 1) ? ' disabled"': '"') ?>>
+			    <li id="next-pag" class=<?php echo '"page-item'. (($pages == 1) ? ' disabled"': '"') ?>>
 			      <a class="page-link">Next</a>
 			    </li>
 			  </ul>
