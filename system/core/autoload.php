@@ -1,10 +1,10 @@
 <?php if ( ! defined('PATH_SYSTEM')) die ('Bad requested!');
 
 // Load Base Controller Class
-include_once PATH_SYSTEM . '/core/FT_Controller.php';
-if (file_exists(PATH_APPLICATION . '/core/Base_Controller.php')){
-    require_once PATH_APPLICATION . '/core/Base_Controller.php';
-}
+include_once PATH_SYSTEM . '/core/Controller.php';
+// if (file_exists(PATH_APPLICATION . '/core/Base_Controller.php')){
+//     require_once PATH_APPLICATION . '/core/Base_Controller.php';
+// }
 
 // Auto Load undeclared classes
 function my_app_autoloader($class)
@@ -25,14 +25,11 @@ function my_app_autoloader($class)
         require_once PATH_APPLICATION.$file;
     }
 }
-
-// Register class load
 spl_autoload_register('my_app_autoloader');
 
 // Create route class
 require_once PATH_SYSTEM.'/router/functions.php';
 $dispatcher = Router\simpleDispatcher(function(Router\RouteCollector $r) {
-    // require_once an route file
     require_once PATH_SYSTEM.'/router/Web.php';
 });
 
@@ -51,24 +48,24 @@ $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
 switch ($routeInfo[0]) {
     // if not found Route
     case Router\Dispatcher::NOT_FOUND:
-        $controller = new Controller\Base_Controller();
+        $controller = new Core\Base_Controller();
         $controller->loadView('error/404');
     break;
     // if not Allowed Method
     case Router\Dispatcher::METHOD_NOT_ALLOWED:
-    $allowedMethods = $routeInfo[1];
-    header("HTTP/1.0 405 Method Not Allowed");
+        $allowedMethods = $routeInfo[1];
+        header("HTTP/1.0 405 Method Not Allowed");
     break;
     // Found method and route
     case Router\Dispatcher::FOUND:
-    $handler = $routeInfo[1];
-    $vars = $routeInfo[2];
-    $last = explode('/', $handler);
-    $last = end($last);
-    $segments = explode('@', $last);
-    $controller = $segments[0];
-    $method = $segments[1];
-    $controller = new $controller();
-    call_user_func_array(array($controller, $method), $vars ? $vars : array());
+        $handler = $routeInfo[1];
+        $vars = $routeInfo[2];
+        $last = explode('/', $handler);
+        $last = end($last);
+        $segments = explode('@', $last);
+        $controller = $segments[0];
+        $method = $segments[1];
+        $controller = new $controller();
+        call_user_func_array(array($controller, $method), $vars ? $vars : array());
     break;
 }

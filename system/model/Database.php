@@ -19,7 +19,6 @@ class Database
     protected $Sql;
     protected $Password;
     protected $Instance;
-
     /**
      * Database::__construct()
      * Constructor & destructor
@@ -27,12 +26,9 @@ class Database
     public function __construct()
     {
         $this->setup();
-        $this->connect();
     }
-
     public function __destruct()
     {}
-
     /**
      * Database::setup()
      * This function is a kind of parametrized constructor. Sets up the database's host, user, etc.
@@ -48,7 +44,6 @@ class Database
         $this->Database = $database ?: getenv("DB_DATABASE");
         $this->MysqlPort = $port ?: getenv("DB_PORT");
     }
-
     /**
      * Database::connect()
      * Opens up the connection to the database based on the object's attributes¸
@@ -60,15 +55,14 @@ class Database
         if($this->Instance)
             return $this->Instance;
         $con = mysqli_connect($this->Host, $this->User, $this->Password, $this->Database, $this->MysqlPort);
+        mysqli_set_charset($con, 'utf8');
         if (mysqli_connect_errno()) {
             die($this->getError());
         } else {
-            mysqli_set_charset($con, 'utf8');
             $this->Instance = $con;
         }
         return $this->Instance;
     }
-
     /**
      * Database::disconnect()
      * Closes the database's connection to avoid conflict and release memory
@@ -81,7 +75,6 @@ class Database
             die($this->getError());
         }
     }
-
     /**
      * Database::select()
      * Format SQL and returns query content
@@ -93,7 +86,7 @@ class Database
      * @param [array] $orderbys is array(0=>'column_name', ...)
      * @return [array] $results
      */
-    public function select($table, $columns = null, $wheres = null, $joins = null, $orderbys = null)
+    public function select($table, $columns = null, $wheres = null, $joins = null, $orderbys = null, $limit = null)
     {
         //Variables
         $return = array();
@@ -121,6 +114,11 @@ class Database
             //FROM statement
             $this->Sql .= " FROM " . $table;
 
+            //LIMIT
+            if(($limit != "") && ($limit != null) && !empty($limit)) {
+                $this->Sql .= " LIMIT " . $limit[0] . "," . $limit[1];
+            }
+
             //JOINS
             if ($joins != "" || $joins != null) {
                 foreach ($joins as $join) {
@@ -132,9 +130,11 @@ class Database
             if ($wheres != "" || $wheres != null) {
                 foreach ($wheres as $index => $where) {
                     //if string format SQL
-                    if (gettype($where["value"]) == "string" && !is_numeric($where["value"])) {
+                    if($where["value"] == null) {
+                        $where["value"] = "NULL";
+                    }
+                    elseif (gettype($where["value"]) == "string" && !is_numeric($where["value"])) {
                         $where["value"] = "'" . $where["value"] . "'";
-                        $where["value"] = $where["value"];
                         $where["condition"] = "LIKE";
                     }
 
@@ -163,6 +163,7 @@ class Database
 
             $this->Sql .= ";";
 
+            $a =$this->Sql;
             $results = $this->Instance->query($this->Sql);
 
             if (!$results) {
@@ -180,7 +181,6 @@ class Database
         } else
             die("Must provide a table to query the database.");
     }
-
     /**
      * Database::insert()
      * Format SQL and inserts into database
@@ -238,9 +238,7 @@ class Database
         } else {
             die("Must provide a table to insert to");
         }
-
     }
-
     /**
      * Database::delete()
      * Format SQL and deletes the specific row in the database
@@ -290,7 +288,6 @@ class Database
             die("Must provide a table to delete from");
         }
     }
-
     /**
      * Database::update()
      * Format SQL and updates the specific row in the database
@@ -358,7 +355,6 @@ class Database
             die("Must provide a table to delete from");
         }
     }
-
     public function getKeys($table, $type = "primary")
     {
         $this->connect();
@@ -394,7 +390,6 @@ class Database
             return $return;
         }
     }
-
     public function getJoinsArray($table)
     {
         $fk_array = array();
@@ -437,13 +432,10 @@ class Database
 
         return $return;
     }
-
     public function getSql()
     {
         return $this->Sql;
     }
-
-
     private function getError()
     {
         return "<br/>" . $this->Sql . "<br/> SQL Exception #" . $this->Instance->errno . " : " . $this->Instance->error . "<br/>";

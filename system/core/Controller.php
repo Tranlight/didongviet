@@ -1,6 +1,6 @@
 <?php
 
-namespace Controller;
+namespace Core;
 if ( ! defined('PATH_SYSTEM')) die ('Bad requested!');
 
 /**
@@ -9,9 +9,9 @@ if ( ! defined('PATH_SYSTEM')) die ('Bad requested!');
  * @email       tranlight98@gmail.com
  * @copyright   Copyright (c) 2015
  * @since       Version 1.0
- * @filesource  system/core/FT_Controller.php
+ * @filesource  system/core/Controller.php
  */
-class FT_Controller
+class Controller
 {
     protected $library  = NULL;
     public function __construct() 
@@ -99,11 +99,6 @@ class FT_Controller
             require_once(PATH_SYSTEM . '/library/' . $class . '.php');
             $this->{$library} = new $class($agrs);
         }
-    }
-
-    public function __destruct() 
-    {
-        echo "đã hủy FT_Controller.php";
     }
 }
 ?>

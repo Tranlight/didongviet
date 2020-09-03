@@ -48,11 +48,11 @@
 			<div>
 				<button>Đăng nhập <i class="fal fa-sign-in-alt"></i></button>
 				<button>Đăng ký <i class="fal fa-user"></i></button>
-				<button class="cart-btn btn-primary"> 
+				<a href="http://didongvietcom.vn/cart"><button class="cart-btn btn-primary"> 
 					<i class="fal fa-shopping-cart"></i>
 					<span>Giỏ hàng</span>
-					<span class="badge">0</span>
-				</button>
+					<span class="badge"><?php echo $num_products ?></span>
+				</button></a>
 			</div>
 		</div>
 	</div>

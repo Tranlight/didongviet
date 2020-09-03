@@ -1,14 +1,31 @@
 <?php
 namespace Controller;
-use Model\DatabaseSite;
+use Model\Product;
+use Model\Category;
+use Core\Session;
+use Core\Base_Controller;
 class IndexController extends Base_Controller {
+	public function getInfo() {
+		curl_setopt_array($ch = curl_init(), array(
+		  CURLOPT_URL => "https://api.pushover.net/1/messages.json",
+		  CURLOPT_POSTFIELDS => array(
+		    "token" => "abc123",
+		    "user" => "user123",
+		    "message" => "hello world",
+		  ),
+		  CURLOPT_SAFE_UPLOAD => true,
+		  CURLOPT_RETURNTRANSFER => true,
+		));
+		curl_exec($ch);
+		curl_close($ch);
+	}
 	public function Index() {
 		// load view banner for website
 		$this->loadView('site/template/section-one');
 		
 		//Load dữ liệu từ database
-		$db = new DatabaseSite();
-		$categories = $db->select('category');
+		$db = new Category();
+		$categories = $db->getCategoriesHaveNoAlias();
 		$data = array();
 		$listColumn = array(
 			'product.id as id',
@@ -40,8 +57,9 @@ class IndexController extends Base_Controller {
 				$this->loadView('site/template/product-list-row', $list_product);
 		}
 	}
+
 	public function Rawl() {
-		$this->loadView('site/download_hoangha');
+		$this->loadView('site/crawl/crawl-dienthoai-tgdd');
 	}
 
 	public function loadDatafromJson() {
@@ -56,13 +74,24 @@ class IndexController extends Base_Controller {
 		$data = json_decode($txt);
 	}
 
-	public function Connection($title) {
-		$db = new DatabaseSite();
-		$product = $db->getItembyAlias('product', '/'.$title);
+	public function viewProduct($alias) {
+		$db = new Product();
+		$product = $db->getItembyAlias('/'.$alias);
+		$db->disconnect();
 		if(!empty($product))
 			$this->loadView('site/template/product-detail', $product[0]);
 		else
-			$this->loadView('error\404');
+			$this->loadView('error/404');
+	}
+
+	public function viewCategory($category_alias) {
+		$db = new Category();
+		$category = $db->getItembyAlias($category_alias);
+		$db->disconnect();
+		if($category)
+			$this->loadView('site/template/product-detail', $product[0]);
+		else
+			$this->loadView('error/404');
 	}
 
 	public function Convert_Json() {
@@ -77,8 +106,7 @@ class IndexController extends Base_Controller {
 
 		// return list product by category
 		$data = json_decode($txt);
-		$db = new DatabaseSite();
-
+		$db = new Product();
 		foreach ($data as $title => $arr) {
 			$isslide = ($arr[0] = 'div' ) ? 1 : 0;
 			if($db->insert('category', array('name', 'isslide'), array($title, $isslide))) {
@@ -98,6 +126,18 @@ class IndexController extends Base_Controller {
 	}
 
 	public function ViewCart() {
-		$this->loadView('site/template/shopcart');
+		$productdb = new Product();
+		$ls_id 	   = Session::read('cart_item') ? Session::read('cart_item') : array();
+		$ls		   = array();		
+		$total     = 0;
+		foreach ($ls_id as $id => $num_of_product) {
+			$item  			= $productdb->getItembyId($id, array('name', 'price_sale', 'price_original', 'alias', 'url_images'))[0];
+			$item['num']    = $num_of_product;
+			$item['id']		= $id;
+			$ls[] 			= $item;
+			$total	+= (floatval($item['price_sale'])?floatval($item['price_sale']):floatval($item['price_original']))*$num_of_product;
+		}
+		$this->loadView('site/template/shopcart', array('total' => $total,'list_products' => $ls));
+		// $productdb->disconnect();
 	}
 }

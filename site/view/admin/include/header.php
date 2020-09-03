@@ -2,21 +2,30 @@
 <html lang="en">
 
 <head>
-	<title>Icons | Klorofil - Free Bootstrap Dashboard Template</title>
+	<title>Di Động Việt Com | <?php echo isset($title) ? $title : ''; ?></title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<!-- VENDOR CSS -->
-	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href=<?php echo asset('/vendor/bootstrap/css/bootstrap.min.css') ?>>
+	<!-- FONT AWESOME -->
+	<link rel="stylesheet" type="text/css" href=<?=asset('/css/font-awesome/css/fontawesome.css')?>>
+	<link rel="stylesheet" type="text/css" href=<?=asset('/css/font-awesome/css/brands.css')?>>
+	<link rel="stylesheet" type="text/css" href=<?=asset('/css/font-awesome/css/solid.css')?>>
+	<link rel="stylesheet" type="text/css" href=<?=asset('/css/font-awesome/css/light.css')?>>
+	<!-- LINEAR -->
+	<link rel="stylesheet" href=<?php echo asset('/vendor/linearicons/style.css') ?>>
+	
 	<!-- MAIN CSS -->
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href=<?php echo asset('/css/main.css') ?>>
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<!-- ICONS -->
-	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href=<?php echo asset('/img/apple-icon.png') ?>>
+	<link rel="icon" type="image/png" sizes="96x96" href=<?php echo asset('/img/favicon.png') ?>>
+	<script src=<?php echo asset('/vendor/jquery/jquery.min.js') ?>></script>
+	<script src=<?php echo asset('/vendor/bootstrap/js/bootstrap.min.js') ?>></script>
+	<script src=<?php echo asset('/js/script.js') ?>></script>
 </head>
 
 <body>
@@ -25,7 +34,7 @@
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.html"><img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+				<a href="index.html"><img src=<?php echo asset('/img/logo-dark.png'); ?> alt="Klorofil Logo" class="img-responsive logo"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
@@ -37,9 +46,6 @@
 						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
 					</div>
 				</form>
-				<div class="navbar-btn navbar-btn-right">
-					<a class="btn btn-success update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
-				</div>
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
@@ -66,7 +72,7 @@
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src=<?php echo asset('/img/user.png'); ?> class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
 								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
 								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
@@ -74,9 +80,6 @@
 								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 							</ul>
 						</li>
-						<!-- <li>
-							<a class="update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
-						</li> -->
 					</ul>
 				</div>
 			</div>
@@ -87,11 +90,13 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="index.html" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="elements.html" class=""><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
-						<li><a href="charts.html" class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
-						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
-						<li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
+						<li><a href="/admin/dashboard" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="/admin/products" class=""><i class="fas fa-biking"></i> <span>Product</span></a></li>
+						<li><a href="/admin/page-profile" class="active"><i class="lnr lnr-home"></i> <span>Page Profile</span></a></li>
+						<li><a href="/admin/elements" class=""><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
+						<li><a href="/admin/charts" class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
+						<li><a href="/admin/panels" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
+						<li><a href="/admin/notifications" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
 						<li>
 							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="subPages" class="collapse ">
@@ -102,9 +107,9 @@
 								</ul>
 							</div>
 						</li>
-						<li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
-						<li><a href="typography.html" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-						<li><a href="icons.html" class="active"><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+						<li><a href="/admin/tables" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
+						<li><a href="/admin/typography" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
+						<li><a href="/admin/icons" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
 					</ul>
 				</nav>
 			</div>

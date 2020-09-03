@@ -1,10 +1,17 @@
 <?php
+// PAGE
 $r->get('/rawl', 'Controller\IndexController@Rawl');
 $r->get('/connection', 'Controller\IndexController@Connection');
 $r->get('/', 'Controller\IndexController@Index');
-$r->get('/product/{title}', 'Controller\IndexController@connection');
 $r->get('/adddatabase', 'Controller\IndexController@Convert_Json');
-$r->addGroup('/admin', function (Router\RouteCollector $r) {
-	$r->get('/', 'Controller\IndexController@connection');
-});
-$r->get('/gio-hang', 'Controller\IndexController@ViewCart');
+$r->get('/cart', 'Controller\IndexController@ViewCart');
+$r->get('/abc', 'Controller\IndexController@getInfo');
+$r->get('/product/{id}', 'Controller\IndexController@viewProduct');
+// REQUEST AJAX
+$r->post('/add-to-cart/{product_id}/{num}', 'Controller\RequestController@addToCart');
+$r->get('/realtime', 'Controller\RequestController@realtime');
+$r->get('/admin[/]', 'Controller\AdminController@Index');
+// ADMIN
+$r->get('/admin/{page}', 'Controller\AdminController@Index');
+// PRODUCT
+$r->post('/products/{page}', 'Controller\RequestController@product_page');
