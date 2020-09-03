@@ -1,6 +1,4 @@
-public/image/
 .vscode/
-public/img/
 sftp-config.json
 db_volume/
 nginx/
