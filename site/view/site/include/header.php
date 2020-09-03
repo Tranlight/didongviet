@@ -28,7 +28,7 @@
 		<div class="banner">
 			<span class="navigation"></span>
 			<!-- logo section -->
-			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 logo">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 logo">
 				<a class="" href="/">
 					<img src=<?=asset('/image/logo.png')?> alt="placeholder+image">
 				</a>

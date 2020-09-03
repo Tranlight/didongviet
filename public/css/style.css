@@ -94,9 +94,9 @@ body {
 /*Category*/
 .category div {
 	padding: 0px;
-	text-align: center;
 }
 .category a {
+	margin-left: 15px;
 	line-height: 50px;
 	text-decoration: none;
 }
@@ -520,6 +520,8 @@ div[id^="owl-"] .product-thumbnail img{
 	}
 	.logo {
 		padding: 0;
+	}
+	.logo img {
 		margin-left: 15px;
 	}
 }
